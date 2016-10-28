@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Nerds</title>
-	<link href="css/style-catalog.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -41,17 +41,21 @@
 					<!-- здесь будет бегунок -->
 					<div class="filter-mesh">
 						<h2>Сетка:</h2>
-						<label><input type="radio" name="mesh" value="1" checked>Адаптивная</label>
-						<label><input type="radio" name="mesh" value="2">Фиксированная</label>
-						<label><input type="radio" name="mesh" value="3">Резиновая</label>
+						<ul>
+							<li><label><input type="radio" name="mesh" value="1" checked>Адаптивная</label></li>
+							<li><label><input type="radio" name="mesh" value="2">Фиксированная</label></li>
+							<li><label><input type="radio" name="mesh" value="3">Резиновая</label></li>
+						</ul>
 					</div>
 					<div class="filter-features">
 						<h2>Особенности:</h2>
-						<label><input type="checkbox" name="slider" checked>Слайдер</label>
-						<label><input type="checkbox" name="advantages">Блок преимуществ</label>
-						<label><input type="checkbox" name="news" checked>Новости</label>
-						<label><input type="checkbox" name="gallery">Галерея</label>
-						<label><input type="checkbox" name="basket">Корзина</label>
+						<ul>
+							<li><label><input type="checkbox" name="slider" checked>Слайдер</label></li>
+							<li><label><input type="checkbox" name="advantages">Блок преимуществ</label></li>
+							<li><label><input type="checkbox" name="news" checked>Новости</label></li>
+							<li><label><input type="checkbox" name="gallery">Галерея</label></li>
+							<li><label><input type="checkbox" name="basket">Корзина</label></li>
+						</ul>
 					</div>
 					<div class="btn-form">
 						<input class="btn btn-filter" type="submit" value="Показать">
@@ -61,11 +65,13 @@
 			<div class="column-templates">
 				<div class="sort">
 					<h2>Сортировать:</h2>
-					<a class="active-condition">По цене</a>
-					<a href="#">По типу</a>
-					<a href="#">По названию</a>
-					<a class="active-arrow">стрелка вниз</a>
-					<a href="#">стрелка вверх</a>
+					<ul>
+						<li><a class="active-condition">По цене</a></li>
+						<li><a href="#">По типу</a></li>
+						<li><a href="#">По названию</a></li>
+						<li><a class="active-arrow">стрелка вниз</a></li>
+						<li><a href="#">стрелка вверх</a></li>
+					</ul>
 				</div>
 				<div class="price-templates">
 					<div class="product">
