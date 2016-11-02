@@ -6,12 +6,12 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
+	<header class="main-header">
 		<div class="container">
-			<div class="logo">
-				<img src="img/nerds-logo.png" width="160" height="65" alt="nerds">
-			</div>
 			<nav class="main-navigation">
+				<div class="logo">
+					<img src="img/nerds-logo.png" width="160" height="65" alt="nerds">
+				</div>
 				<ul>
 					<li>
 						<a href="#">Студия</a>
@@ -30,11 +30,11 @@
 			<div class="basket">
 				<a href="#">Корзина</a>
 			</div>
-			<h1>Магазин готовых шаблонов</h1>
+			<h1 class="title-catalog">Магазин готовых шаблонов</h1>
 		</div>	
 	</header>
 	<main>
-		<div class="container">
+		<div class="container clearfix">
 			<div class="column-filters">
 				<form class="filter-templates" action="#" method="post">
 					<h2 class="title-filter">Стоимость:</h2>
@@ -64,7 +64,7 @@
 			</div>
 			<div class="column-templates">
 				<div class="sort">
-					<h2>Сортировать:</h2>
+					<span class="title-sort">Сортировать:</span>
 					<ul>
 						<li><a class="active-condition">По цене</a></li>
 						<li><a href="#">По типу</a></li>
@@ -102,7 +102,7 @@
 						<a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Шаблон"></a>
 						<div class="product-popup">
 							<a href="#"><h2>Mishka</h2></a>
-							<span class="product-desc">Интернет-магазин вязаных игрушек</span>
+							<span class="product-desc"> Интернет-магазин вязаных игрушек</span>
 							<a class="btn btn-price" href="">9 900 руб.</a>
 						</div>
 					</div>
@@ -140,19 +140,19 @@
 			</div>
 		</div>
 	</main>
-	<footer>
+	<footer class="main-footer">
 		<div class="map">
 			<img src="img/map-marker.jpg" width="1440" height="416" alt="карта">
 		</div>
-		<div class="container">
-			<div class="footer-contacts">
-				<h2 class="contacts-name">Nёrds design studio</h2>
-				<p>191186, Санкт-Петербург,<br>
-					ул, Б. Конюшенная, д. 19/8<br>
-					тел. +7 (812) 275-75-75<br>
-				</p>
-				<a class="btn btn-write-to-us" href="#">Напишите нам</a>
-			</div>
+		<div class="footer-contacts">
+			<h2 class="contacts-name">Nёrds design studio</h2>
+			<p>191186, Санкт-Петербург,<br>
+				ул, Б. Конюшенная, д. 19/8<br>
+				тел. +7 (812) 275-75-75<br>
+			</p>
+			<a class="btn btn-write-to-us" href="#">Напишите нам</a>
+		</div>
+		<div class="container clearfix">
 			<div class="footer-social">
 				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
@@ -170,3 +170,4 @@
 	</footer>
 </body>
 </html>
+

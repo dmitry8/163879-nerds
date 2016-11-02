@@ -1,3 +1,10 @@
+html,
+body {
+    /*width: 1440px;*/
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Roboto", "Arial", serif;
     font-size: 16px;
@@ -15,4 +22,207 @@ h2 {
     font-size: 24px;
     line-height: 30px; 
     font-weight: bold;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main-header {
+    margin-bottom: 80px;
+    background-color: #eeeeee; /* временное оформление для наглядности */ 
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-color: #a2b5da; /* временное оформление для наглядности */ 
+}
+
+.main-navigation {
+    width: 960px;
+    float: left;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.logo {
+    width: 200px;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navigation li {
+    display: inline-block;
+}
+
+.basket {
+    width: 160px;
+    float: right;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.slider {
+    clear: both;
+}
+
+.slider-text {
+    width: 380px;
+    float: left;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.slider-pic {
+    width: 760;
+    float: right;
+}
+
+.advantage {
+    float: left;
+    width: 300px;
+    margin-right: 100px;
+    background-color: #e8e29e; /* временное оформление для наглядности */ 
+}
+
+.advantage:last-child {
+    margin-right: 0;
+}
+
+.advantages {
+    margin-bottom: 80px;
+}
+
+.column-left {
+    width: 680px;
+    float: left;
+    padding-top: 80px;
+    background-color: #e8e29e; /* временное оформление для наглядности */ 
+}
+
+.column-right {
+    width: 360px;
+    float: right;
+    background-color: #e8e29e; /* временное оформление для наглядности */ 
+}
+
+.about-us {
+    margin-bottom: 75px;
+    background-color: #ccc; /* временное оформление для наглядности */ 
+}
+
+.logo-partner {
+    width: 260px;
+    margin-right: 40px;
+    margin-top: 62px;
+    margin-bottom: 50px;
+    float: left;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.logo-partner:last-child {
+    margin-right: 0;
+}
+
+.main-footer {
+    background-color: #ffffff; /* временное оформление для наглядности */
+}
+
+.footer-contacts {
+    width: 320px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.footer-social {
+    width: 360px;
+    margin-right: 40px;
+    margin-top: 69px;
+    margin-bottom: 70px;
+    float: left;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.footer-slogan {
+    margin-top: 69px;
+    margin-bottom: 70px;
+    float: left;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.column-filters {
+    width: 300px;
+    float: left;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.column-templates {
+    width: 760px;
+    float: right;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.sort {
+    margin-bottom: 60px;
+}
+
+.sort ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    background-color: #9de48c; /*временное оформление для наглядности сетки*/
+}
+
+.sort li {
+    display: inline-block;
+}
+
+.title-catalog {
+    width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 82px;
+    padding-bottom: 115px;
+    clear: both;
+    background-color: #e8e29e; /* временное оформление для наглядности */
+}
+
+.product {
+    width: 360px;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 39px;
+    background-color: #9de48c; /* временное оформление для наглядности */
+}
+
+.product-popup {
+    display: none;
+}
+
+.product:nth-child(2n) {
+    margin-right: 0;
+}
+
+.pagination {
+    margin-top: 35px;
+    clear: both;
+    background-color: #9de48c; /*временное оформление для наглядности сетки*/
+}
+
+.pagination {
+    margin-bottom: 60px;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination li {
+    display: inline-block;
 }
