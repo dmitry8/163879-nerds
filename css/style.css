@@ -117,10 +117,11 @@ h2 {
 }
 
 .logo-partner {
-    width: 260px;
+    width: 240px;
     margin-right: 40px;
     margin-top: 62px;
     margin-bottom: 50px;
+    padding-left: 20px;
     float: left;
     background-color: #e8e29e; /* временное оформление для наглядности */
 }
