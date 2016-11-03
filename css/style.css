@@ -1,6 +1,5 @@
 html,
 body {
-    /*width: 1440px;*/
     margin: 0;
     padding: 0;
 }
@@ -10,6 +9,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+    width: 1440px;
 }
 
 h1 {
@@ -131,14 +131,16 @@ h2 {
 }
 
 .main-footer {
+    position: relative;
     background-color: #ffffff; /* временное оформление для наглядности */
 }
 
 .footer-contacts {
-    width: 320px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
+    width: 220px;
+    position: absolute;
+    padding: 50px;
+    left: 140px;
+    bottom: 300px;
     background-color: #e8e29e; /* временное оформление для наглядности */
 }
 
@@ -227,3 +229,4 @@ h2 {
 .pagination li {
     display: inline-block;
 }
+
