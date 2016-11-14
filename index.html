@@ -3,44 +3,74 @@
 <head>
 	<meta charset="utf-8">
 	<title>Nerds</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<header class="main-header">
-		<div class="container clearfix">
-			<nav class="main-navigation">
+		<div class="container">
+			<div class="line-header clearfix">
 				<div class="logo">
 					<img src="img/nerds-logo.png" width="160" height="65" alt="nerds">
 				</div>
-				<ul>
-					<li>
-						<a href="#">Студия</a>
-					</li>
-					<li>
-						<a href="#">Клиенты</a>
-					</li>
-					<li>
-						<a href="catalog.html">Магазин</a>
-					</li>
-					<li>
-						<a href="#">Контакты</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="basket">
-				<a href="#">Корзина</a>
+				<nav class="main-navigation">
+					<ul>
+						<li>
+							<a href="#">Студия</a>
+						</li>
+						<li>
+							<a href="#">Клиенты</a>
+						</li>
+						<li>
+							<a href="catalog.html">Магазин</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="basket">
+					<a href="#">Корзина</a>
+				</div>
 			</div>
 			<div class="slider">
-				<div class="slider-text">
-					<h1>Долго, дорого, скрупулезно</h1>
-					<p>
-						Математически выверенный дизайн<br> 
-						для вашего сайта или мобильного приложения.
-					</p>
-					<a class="btn btn-slider" href="#">Узнать больше</a>
+				<div class="slider-controls">
+					<i class="active"></i>
+					<i></i>
+					<i></i>
 				</div>
-				<div class="slider-pic">
-					<img src="img/slider-1.jpg" width="760" height="431" alt="Слайд">
+				<div class="slides">
+					<div class="slide">
+						<div class="slide-text">
+							<h2 class="slide-title">Долго, дорого, скрупулезно.</h2>
+							<p>
+								Математически выверенный дизайн<br> 
+								для вашего сайта или мобильного приложения.
+							</p>
+							<a class="btn btn-slider" href="#">Узнать больше</a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-text">
+							<h2 class="slide-title">Любим математику как никто другой</h2>
+							<p>
+								Никакого креатива, только математические формулы<br> 
+								для расчета идеальных пропорций.
+							</p>
+							<a class="btn btn-slider" href="#">Узнать больше</a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-text">
+							<h2 class="slide-title">Только ночь, только хардкор</h2>
+							<p>
+								Работать днем, как все? Мы против этого.<br>
+								Ближе к полуночи работа только начинается.
+							</p>
+							<a class="btn btn-slider" href="#">Узнать больше</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>		
@@ -54,7 +84,7 @@
 					<p>
 						Мир никогда не будет прежним после того как увидит ваш сайт!
 					</p>
-					<a  class="btn btn-website" href="">Заказать</a>
+					<a  class="btn btn-advant btn-website" href="#">Заказать</a>
 				</div>
 				<div class="advantage app">
 					<img src="img/illustration-2.jpg" width="300" height="146" alt="Приложения">
@@ -63,30 +93,32 @@
 						Покорите топ-10 приложений в
 						AppStore и Google Play
 					</p>
-					<a class="btn btn-app" href="">Заказать</a>
+					<a class="btn btn-advant btn-app" href="#">Заказать</a>
 				</div>
 				<div class="advantage presentation">
-					<img src="img/illustration-3.jpg" width="300" height="146" alt="Призентации">
-					<h2>Призентации</h2>
+					<img src="img/illustration-3.jpg" width="300" height="146" alt="Презентации">
+					<h2>Презентации</h2>
 					<p>
 						Вы даже не подозреваете, насколько вы изумительны!
 					</p>
-					<a class="btn btn-presentation" href="">Заказать</a>
+					<a class="btn btn-advant btn-presentation" href="#">Заказать</a>
 				</div>
 			</div>
 			<hr>
 			<div class="about-us clearfix">
 				<div class="column-left">
-					<p><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+					<b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
 					<p>
 						Исповедуем принципы минимализма и чистоты. Ставим математический расчет
 						превыше креатива. Работаем непокладая рук, как роботы.
 					</p>
-					<h2 class="title-list-job">Выполняем заказы на разработку</h2>
+					<h2 class="title-list-job">
+						Выполняем заказы на разработку:
+					</h2>
 					<ul class="list-job">
-						<li>Веб-сайтов любой сложности</li>
-						<li>Мобильных приложений для OS и Android</li>
-						<li>Слайдшоу и видео для корпоративныз презентаций</li>
+						<li class="decor-list-1">Веб-сайтов любой сложности</li>
+						<li class="decor-list-2">Мобильных приложений для iOS и Android</li>
+						<li class="decor-list-3">Слайдшоу и видео для корпоративныз презентаций</li>
 					</ul>
 				</div>
 				<div class="column-right">
@@ -94,16 +126,16 @@
 						<img src="img/nerds-illustration.jpg" width="360" height="208" alt="Нёрдс">
 					</div>
 					<table>
-						<caption class="title-table">С 2004 года любим точность во всем</caption>
+						<caption class="title-table">С 2004 года любим точность во всем:</caption>
 						<tr class="percent">
 							<td>
-								46%
+								146<span class="percent-sign">%</span>
 							</td>
 							<td>
-								100%
+								100<span class="percent-sign">%</span>
 							</td>
 							<td>
-								50%
+								50<span class="percent-sign">%</span>
 							</td>
 						</tr>
 						<tr class="text">
@@ -143,7 +175,7 @@
 					</a>
 				</div>
 			</div>
-			<hr>
+			<hr class="margin-footer">
 		</div>
 	</main>
 	<footer class="main-footer">
@@ -153,8 +185,8 @@
 		<div class="footer-contacts">
 			<h2 class="contacts-name">Nёrds design studio</h2>
 			<p>191186, Санкт-Петербург,<br>
-				ул, Б. Конюшенная, д. 19/8<br>
-				тел. +7 (812) 275-75-75<br>
+				ул, Б. Конюшенная, д. 19/8
+				<span class="contacts-tel">тел. +7 (812) 275-75-75</span>
 			</p>
 			<a class="btn btn-write-to-us" href="#">Напишите нам</a>
 		</div>
@@ -165,13 +197,32 @@
 				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
 			</div>
 			<div class="footer-slogan">
-				<p>
+				<p class="title-slogan">
 					Давайте дружить, это выгодно!
 				</p>
 				<p>
 					Скидка 10% для друзей из социальных сетей.
 				</p>
 			</div>
+		</div>
+		<div class="modal-content">
+			<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+			<h2 class="modal-content-title">Напишите нам</h2>
+			<form class="modal-form" action="#" method="post">
+				<div class="half-width">
+					<label for="name">Ваше имя:</label>
+					<input class="icon-user" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+				</div>
+				<div class="half-width">
+					<label for="email">Ваш e-mail:</label>
+					<input class="icon-password" type="email"  id="email" name="email" placeholder="Для отправки ответа">
+				</div>
+				<div class="text-form">
+					<label for="text">Текст письма:</label>
+					<textarea id="text" placeholder="В свободной форме"></textarea>
+				</div>
+				<input class="btn btn-modal" type="submit" value="Отправить"></input>
+			</form>
 		</div>
 	</footer>
 </body>
