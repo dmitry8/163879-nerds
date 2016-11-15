@@ -164,11 +164,11 @@ hr {
     z-index: 1000;
 }
 
-.slider-controls i {
+.slider-controls label {
     display: inline-block;
     vertical-align: top;
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     margin-right: 13px;
     background: #ffffff;
     border: 5px solid #ffffff;
@@ -176,7 +176,14 @@ hr {
     cursor: pointer;
 }
 
-.slider-controls .active {
+.slider input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
     width: 8px;
     height: 8px;
     background-color: #ffffff;
@@ -233,7 +240,15 @@ hr {
     display: none;
 }
 
-.slide:nth-child(1) {
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    display: block;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
     display: block;
 }
 
@@ -861,7 +876,6 @@ table .text td:last-child {
     display: none;
 }
 
-
 .slider-checkbox input[type="checkbox"] + .checkbox-features,
 .advantages-checkbox input[type="checkbox"] + .checkbox-features,
 .news-checkbox input[type="checkbox"] + .checkbox-features,
@@ -914,7 +928,7 @@ table .text td:last-child {
 .news-checkbox input[type="checkbox"]:hover + .checkbox-features,
 .gallery-checkbox input[type="checkbox"]:hover + .checkbox-features,
 .basket-checkbox input[type="checkbox"]:hover + .checkbox-features {
-    border: 3px solid #4d4d4d;  
+    border: 2px solid #4d4d4d;  
 }
 
 .filter-features input[type="checkbox"]:hover:checked + .checkbox-features::before,
@@ -1105,6 +1119,7 @@ table .text td:last-child {
     width: 360px;
     height: 231px;
     background-color: #eeeeee;
+    overflow: hidden;
 }
 
 .product-popup h2 {
