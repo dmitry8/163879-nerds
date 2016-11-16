@@ -1249,6 +1249,10 @@ table .text td:last-child {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
 }
 
+.modal-content-show {
+    display: block;
+}
+
 .modal-content-close {
     position: absolute;
     top: 78px;
@@ -1391,10 +1395,26 @@ table .text td:last-child {
     display: block;
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(-2deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: rotate(2deg);
+  }
+}
 
+.modal-error {
+  animation: shake 0.5s;
+}
 
-
-
+iframe {
+    position: absolute;
+    bottom: 212px;
+}
 
 
 
