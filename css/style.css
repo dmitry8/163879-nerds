@@ -268,13 +268,15 @@ hr {
 
 .btn-slider:hover,
 .btn-website:hover,
-.btn-write-to-us:hover {
+.btn-write-to-us:hover,
+.btn-modal:hover {
     background-color: #e74246;
 }
 
 .btn-slider:active,
 .btn-website:active,
-.btn-write-to-us:active {
+.btn-write-to-us:active,
+.btn-modal:active {
     color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 3px 0 0 #c13135 inset;
     background-color: #d7373b;
@@ -665,9 +667,6 @@ table .text td:last-child {
     margin: 0;
 }
 
-
-/*Стили каталога*/
-
 .main-header .title-catalog {
     margin: 0;
     width: 760px;
@@ -732,26 +731,27 @@ table .text td:last-child {
 }
 
 .range-controls .toggle-min {
- left: 18px;
+    left: 18px;
 }
 
 .range-controls .toggle-max {
- left: 160px;
+    left: 160px;
 }
 
 .price-controls {
- font-size: 0;
+    font-size: 0;
 }
 
 .price-controls label {
     font-size: 16px;
     line-height: 22px;
     display: inline-block;
+    vertical-align: top;
     width: 50%;
 }
 
 .max-price {
- text-align: right;
+    text-align: right;
 }
 
 .price-controls input {
@@ -900,7 +900,8 @@ table .text td:last-child {
     border-radius: 3px;
     background-color: #b8b8b8;
     border: 2px solid #ffffff;
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
 }
 
 .filter-features input[type="checkbox"]:checked + .checkbox-features::after {
@@ -912,7 +913,8 @@ table .text td:last-child {
     height: 5px;
     border-radius: 1px;
     background-color: #b8b8b8;
-    transform: rotate(46deg);
+    -webkit-transform: rotate(46deg);
+            transform: rotate(46deg);
 }
 
 .filter-features label:hover {
@@ -1141,7 +1143,9 @@ table .text td:last-child {
     display: block;
     line-height: 18px;
     margin-bottom: 44px;
+    height: 36px;
     color: #666666;
+    overflow: auto;
 }
 
 .btn-price {
@@ -1173,6 +1177,7 @@ table .text td:last-child {
 .pagination {
     clear: both;
     display: inline-block;
+    vertical-align: top;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1181,6 +1186,7 @@ table .text td:last-child {
 
 .pagination li {
     display: inline-block;
+    vertical-align: top;
 }
 
 .pagination a {
@@ -1252,7 +1258,8 @@ table .text td:last-child {
 
 .modal-content-show {
     display: block;
-    animation: rotate 0.4s;
+    -webkit-animation: rotate 0.4s;
+            animation: rotate 0.4s;
 }
 
 .modal-content-close {
@@ -1279,11 +1286,13 @@ table .text td:last-child {
 }
 
 .modal-content-close::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .modal-content-close::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .modal-content-close:hover:before,
@@ -1381,6 +1390,7 @@ table .text td:last-child {
 
 .half-width {
     display: inline-block;
+    vertical-align: top;
     margin-right: 37px;
     margin-top: 40px;
 }
@@ -1389,30 +1399,71 @@ table .text td:last-child {
     margin-right: 0;
 }
 
-
-
 .sprite {
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     display: block;
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%, 100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   20%, 40%, 60%, 80% {
-    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0%   {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  50% {
+    opacity: 0.2;
+  }
+
+  80% {
+     opacity: 0.4;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+   opacity: 1;
   }
 }
 
 @keyframes rotate {
   0%   {
     opacity: 0;
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   
   50% {
@@ -1433,7 +1484,8 @@ table .text td:last-child {
 }
 
 .modal-error {
-  animation: shake 0.5s;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
 }
 
 iframe {
@@ -1441,7 +1493,3 @@ iframe {
     bottom: 212px;
     border: none;
 }
-
-
-
-
