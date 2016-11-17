@@ -1439,6 +1439,7 @@ table .text td:last-child {
 iframe {
     position: absolute;
     bottom: 212px;
+    border: none;
 }
 
 
