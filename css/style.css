@@ -1,4 +1,3 @@
-
 body {
     min-width: 1200px;
     font-size: 16px;
@@ -6,9 +5,9 @@ body {
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 400;
     color: #000000;
-    width: 1440px;
     background-color: #ffffff;
     margin: 0 auto;
+    min-width: 1440px;
 }
 
 h1 {
@@ -33,6 +32,12 @@ hr {
     content: "";
     display: table;
     clear: both;
+}
+
+.main-header {
+    color: #000000;
+    background-color: #eeeeee;
+    min-height: 355px;
 }
 
 .container {
@@ -206,7 +211,9 @@ hr {
 
 .slide-text p {
     color: #283136;
-    margin-bottom: 53px;
+    margin-bottom: 16px;
+    height: 85px;
+    overflow: auto;
 }
 
 .slide-title {
@@ -385,35 +392,16 @@ hr {
 
 .list-job li {
     margin-bottom: 25px;
+    position: relative;
 }
 
-.list-job .decor-list-1::before {
+.decor-list::before {
     content: "";
     position: absolute;
     width: 25px;
     height: 2px;
-    left: 1px;
-    bottom: 108px;
-    background-color: #fb565a;
-}
-
-.list-job .decor-list-2::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
-    left: 1px;
-    bottom: 60px;
-    background-color: #fb565a;
-}
-
-.list-job .decor-list-3::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
-    left: 1px;
-    bottom: 12px;
+    left: -35px;
+    bottom: 11px;
     background-color: #fb565a;
 }
 
@@ -555,7 +543,20 @@ table .text td:last-child {
 
 .main-footer {
     position: relative;
-    margin-top: 73px;
+    margin-top: 79px;
+}
+
+.map {
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-contacts {
+    position: relative;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-contacts {
@@ -565,7 +566,7 @@ table .text td:last-child {
     padding-left: 50px;
     padding-right: 48px;
     padding-bottom: 60px;
-    bottom: 266px;
+    bottom: 61px;
     left: 140px;
     background-color: #ffffff; 
 }
@@ -614,27 +615,27 @@ table .text td:last-child {
 }
 
 .social-btn-vk {
-    background-position: -385px 3px;
+    background-position: -4px -599px;
 }
 
 .social-btn-fb {
-    background-position: -73px -1px;
+    background-position: 4px -278px;
 }
 
 .social-btn-inst {
-    background-position: -220px -1px;
+    background-position: -1px -441px;
 }
 
 .social-btn-vk:active {
-    background-position: -471px 3px;
+    background-position: -4px -674px;
 }
 
 .social-btn-fb:active {
-    background-position: -145px -1px;
+    background-position: 4px -360px;
 }
 
 .social-btn-inst:active {
-    background-position: -301px -1px;
+    background-position: -1px -522px;
 }
 
 .social-btn:hover {
@@ -778,7 +779,6 @@ table .text td:last-child {
 }
 
 .filter-mesh label {
-    padding-left: 36px;
     cursor: pointer;
     color: #283136;
 }
@@ -793,9 +793,14 @@ table .text td:last-child {
     display: none;
 }
 
-.adaptive-radio input[type="radio"] + .radio-mesh,
-.fixed-radio input[type="radio"] + .radio-mesh,
-.rubber-radio input[type="radio"] + .radio-mesh {
+.filter-mesh span {
+    padding-left: 36px;
+}
+
+.adaptive-radio span::before,
+.fixed-radio span::before,
+.rubber-radio span::before {
+    content: "";
     position: absolute;
     top: -2px;
     left: 1px;
@@ -806,11 +811,11 @@ table .text td:last-child {
     border: 4px solid #b8b8b8;
 }
 
-.filter-mesh input[type="radio"]:checked + .radio-mesh::before {
+.filter-mesh input[type="radio"]:checked + span::after {
     content: "";
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 6px;
+    left: 9px;
     width: 8px;
     height: 8px;
     background-color: #b8b8b8;
@@ -825,23 +830,25 @@ table .text td:last-child {
     color: #c2c5c6;
 }
 
-.adaptive-radio input[type="radio"]:hover + .radio-mesh,
-.fixed-radio input[type="radio"]:hover + .radio-mesh,
-.rubber-radio input[type="radio"]:hover + .radio-mesh {
+.adaptive-radio span:hover::before,
+.fixed-radio span:hover::before,
+.rubber-radio span:hover::before {
     border: 4px solid #4d4d4d;
 }
 
-.filter-mesh input[type="radio"]:hover:checked + .radio-mesh::before {
+
+.filter-mesh input[type="radio"]:hover:checked + span::after {
     background-color: #4d4d4d;
 }
 
-.adaptive-radio input[type="radio"]:disabled + .radio-mesh,
-.fixed-radio input[type="radio"]:disabled + .radio-mesh,
-.rubber-radio input[type="radio"]:disabled + .radio-mesh {
+.adaptive-radio span:disabled::before,
+.fixed-radio span:disabled::before,
+.rubber-radio span:disabled::before {
     border: 4px solid #ededed;
 }
 
-.filter-mesh input[type="radio"]:disabled:checked + .radio-mesh::before {
+
+.filter-mesh input[type="radio"]:disabled:checked + span::after {
     background-color: #ededed;
 }
 
@@ -1040,10 +1047,14 @@ table .text td:last-child {
     color: #000000;
 }
 
+.sort .arrow-down,
+.sort .arrow-up {
+    font-size: 0;
+}
+
 .sort .active-arrow::after  {
     content: "";
     position: absolute;
-    font-size: 0;
     top: 8px;
     right: 30px;
     border-left: 5px solid transparent;
@@ -1054,7 +1065,6 @@ table .text td:last-child {
 .sort .arrow-up::after {
     content: "";
     position: absolute;
-    font-size: 0;
     top: 8px;
     right: 0px;
     border-left: 5px solid transparent;
@@ -1071,6 +1081,7 @@ table .text td:last-child {
     width: 360px;
     margin-right: 40px;
     margin-bottom: 36px;
+    margin-top: 40px;
     border-radius: 3px;
     background-color: #e9e9e9;
     position: relative;
@@ -1089,34 +1100,32 @@ table .text td:last-child {
 }
 
 .product:hover {
-    box-shadow: 0 9px 28px 0 rgba(50, 50, 50, 0.3)
+    box-shadow: 0 0px 50px 0 rgba(50, 50, 50, 0.3)
 }
 
 .product:nth-child(2n) {
     margin-right: 0;
 }
 
-.header-product {
-    padding-top: 13px;
-    padding-left: 16px;
-    padding-bottom: 3px;
+.product::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 40px;
+    top: -40px;
+    left: 0px;
+    background: transparent url("../img/sprite.png") no-repeat;
+    background-position: -30px -104px;
+    background-color: #ffffff;
 }
 
-.header-product i {
-    display: inline-block;
-    vertical-align: top;
-    width: 8px;
-    height: 8px;
-    margin-right: 5px;
-    background: #ffffff;
-    border: 3px solid #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
+.product:hover::before {
+    background-position: -30px -204px;
 }
 
 .product-popup {
     position: absolute;
-    top: 385px;
+    top: 345px;
     text-align: center;
     width: 360px;
     height: 231px;
@@ -1140,10 +1149,12 @@ table .text td:last-child {
 }
 
 .product-desc {
+    padding-left: 50px;
+    padding-right: 50px;
     display: block;
     line-height: 18px;
-    margin-bottom: 44px;
-    height: 36px;
+    margin-bottom: 16px;
+    height: 63px;
     color: #666666;
     overflow: auto;
 }
@@ -1182,6 +1193,7 @@ table .text td:last-child {
     margin: 0;
     list-style: none;
     margin-top: 37px;
+    margin-bottom: -6px;
 }
 
 .pagination li {
@@ -1286,6 +1298,7 @@ table .text td:last-child {
 }
 
 .modal-content-close::before {
+    top: 10px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
@@ -1386,6 +1399,7 @@ table .text td:last-child {
     padding: 16px 82px;
     margin-top: 43px;
     background-color: #fb565a;
+    cursor: pointer;
 }
 
 .half-width {
