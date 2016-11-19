@@ -1499,4 +1499,6 @@ iframe {
     position: absolute;
     bottom: 212px;
     border: none;
+    width: 100%;
+    height: 416px;
 }
