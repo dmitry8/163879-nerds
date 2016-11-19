@@ -153,14 +153,14 @@ hr {
 
 .slider {
     width: 1159px;
-    height: 431px;
+    min-height: 431px;
     margin: 0 auto;
     position: relative;
 }
 
 .slider-controls {
     position: absolute;
-    bottom: 104px;
+    top: 317px;
     left: 50%;
     width: 200px;
     height: 10px;
@@ -195,25 +195,15 @@ hr {
     box-shadow: 0 0 0 2px #c1c1c1 inset;
 }
 
-.slide {
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 .slide-text {
     width: 431px;
+    min-height: 353px;
     padding-top: 78px;
 }
 
 .slide-text p {
     color: #283136;
-    margin-bottom: 16px;
-    height: 85px;
-    overflow: auto;
+    margin-bottom: 39px;
 }
 
 .slide-title {
@@ -268,9 +258,12 @@ hr {
 }
 
 .btn-slider {
+    display: inline-block;
+    vertical-align: top;
     line-height: 18px;
     padding: 16px 54px;
     background-color: #fb565a;
+    margin-bottom: 10px;
 }
 
 .btn-slider:hover,
@@ -793,13 +786,13 @@ table .text td:last-child {
     display: none;
 }
 
-.filter-mesh span {
+.filter-mesh label {
     padding-left: 36px;
 }
 
-.adaptive-radio span::before,
-.fixed-radio span::before,
-.rubber-radio span::before {
+.adaptive-radio::before,
+.fixed-radio::before,
+.rubber-radio::before {
     content: "";
     position: absolute;
     top: -2px;
@@ -811,7 +804,7 @@ table .text td:last-child {
     border: 4px solid #b8b8b8;
 }
 
-.filter-mesh input[type="radio"]:checked + span::after {
+.filter-mesh input[type="radio"]:checked + label::after {
     content: "";
     position: absolute;
     top: 6px;
@@ -830,25 +823,25 @@ table .text td:last-child {
     color: #c2c5c6;
 }
 
-.adaptive-radio span:hover::before,
-.fixed-radio span:hover::before,
-.rubber-radio span:hover::before {
+.adaptive-radio:hover::before,
+.fixed-radio:hover::before,
+.rubber-radio:hover::before {
     border: 4px solid #4d4d4d;
 }
 
 
-.filter-mesh input[type="radio"]:hover:checked + span::after {
+.filter-mesh input[type="radio"]:hover:checked + label::after {
     background-color: #4d4d4d;
 }
 
-.adaptive-radio span:disabled::before,
-.fixed-radio span:disabled::before,
-.rubber-radio span:disabled::before {
+.adaptive-radio:disabled::before,
+.fixed-radio:disabled::before,
+.rubber-radio:disabled::before {
     border: 4px solid #ededed;
 }
 
 
-.filter-mesh input[type="radio"]:disabled:checked + span::after {
+.filter-mesh input[type="radio"]:disabled:checked + label::after {
     background-color: #ededed;
 }
 
