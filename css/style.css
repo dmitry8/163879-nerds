@@ -876,15 +876,6 @@ table .text td:last-child {
     display: none;
 }
 
-.slider-checkbox {
-    background-color: red;
-}
-
-.slider-checkbox label {
-    background-color: yellow;
-}
-
-
 .slider-checkbox::before,
 .advantages-checkbox::before,
 .news-checkbox::before,
@@ -900,34 +891,22 @@ table .text td:last-child {
     border: 2px solid #b8b8b8;  
 }
 
-.filter-features input[type="checkbox"]:checked + label::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 8px;
-    width: 18px;
-    height: 5px;
-    border-radius: 3px;
-    background-color: #b8b8b8;
-    border: 2px solid #ffffff;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-}
-
 .filter-features input[type="checkbox"]:checked + label::after {
     content: "";
     position: absolute;
-    top: 9px;
-    left: 4px;
-    width: 12px;
-    height: 5px;
+    left: 7px;
+    width: 16px;
+    height: 7px;
     border-radius: 1px;
-    background-color: #b8b8b8;
-    -webkit-transform: rotate(46deg);
-            transform: rotate(46deg);
+    background-color: transparent;
+    border: 5px solid #b8b8b8;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    border-top: 0;
+    border-right: 0;
+    box-shadow: 1px 1px 0 #ffffff,
+    0px -1px 0 #ffffff inset;
 }
-
-
 
 .filter-features label:hover {
     color: #000000;
@@ -945,9 +924,10 @@ table .text td:last-child {
     border: 2px solid #4d4d4d;  
 }
 
-.filter-features input[type="checkbox"]:hover:checked + label::before,
 .filter-features input[type="checkbox"]:hover:checked + label::after {
-    background-color: #4d4d4d;
+    border: 5px solid #4d4d4d;
+    border-top: 0;
+    border-right: 0;
 }
 
 .slider-checkbox:disabled::before,
@@ -955,12 +935,13 @@ table .text td:last-child {
 .news-checkbox:disabled::before,
 .gallery-checkbox:disabled::before,
 .basket-checkbox:disabled::before {
-    border: 3px solid #4d4d4d;  
+    border: 2px solid #ededed;  
 }
 
-.filter-features input[type="checkbox"]:disabled:checked + label::before,
 .filter-features input[type="checkbox"]:disabled:checked + label::after {
-    background-color: #4d4d4d;
+    border: 5px solid #ededed;
+    border-top: 0;
+    border-right: 0;
 }
  
 .btn-filter {
