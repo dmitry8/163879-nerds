@@ -876,11 +876,21 @@ table .text td:last-child {
     display: none;
 }
 
-.slider-checkbox input[type="checkbox"] + .checkbox-features,
-.advantages-checkbox input[type="checkbox"] + .checkbox-features,
-.news-checkbox input[type="checkbox"] + .checkbox-features,
-.gallery-checkbox input[type="checkbox"] + .checkbox-features,
-.basket-checkbox input[type="checkbox"] + .checkbox-features {
+.slider-checkbox {
+    background-color: red;
+}
+
+.slider-checkbox label {
+    background-color: yellow;
+}
+
+
+.slider-checkbox::before,
+.advantages-checkbox::before,
+.news-checkbox::before,
+.gallery-checkbox::before,
+.basket-checkbox::before {
+    content: "";
     position: absolute;
     top: -1px;
     left: 2px;
@@ -890,11 +900,11 @@ table .text td:last-child {
     border: 2px solid #b8b8b8;  
 }
 
-.filter-features input[type="checkbox"]:checked + .checkbox-features::before {
+.filter-features input[type="checkbox"]:checked + label::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 5px;
+    top: 3px;
+    left: 8px;
     width: 18px;
     height: 5px;
     border-radius: 3px;
@@ -904,11 +914,11 @@ table .text td:last-child {
             transform: rotate(135deg);
 }
 
-.filter-features input[type="checkbox"]:checked + .checkbox-features::after {
+.filter-features input[type="checkbox"]:checked + label::after {
     content: "";
     position: absolute;
-    top: 8px;
-    left: 1px;
+    top: 9px;
+    left: 4px;
     width: 12px;
     height: 5px;
     border-radius: 1px;
@@ -916,6 +926,8 @@ table .text td:last-child {
     -webkit-transform: rotate(46deg);
             transform: rotate(46deg);
 }
+
+
 
 .filter-features label:hover {
     color: #000000;
@@ -925,32 +937,32 @@ table .text td:last-child {
     color: #c2c5c6;
 }
 
-.slider-checkbox input[type="checkbox"]:hover + .checkbox-features,
-.advantages-checkbox input[type="checkbox"]:hover + .checkbox-features,
-.news-checkbox input[type="checkbox"]:hover + .checkbox-features,
-.gallery-checkbox input[type="checkbox"]:hover + .checkbox-features,
-.basket-checkbox input[type="checkbox"]:hover + .checkbox-features {
+.slider-checkbox:hover::before,
+.advantages-checkbox:hover::before,
+.news-checkbox:hover::before,
+.gallery-checkbox:hover::before,
+.basket-checkbox:hover::before {
     border: 2px solid #4d4d4d;  
 }
 
-.filter-features input[type="checkbox"]:hover:checked + .checkbox-features::before,
-.filter-features input[type="checkbox"]:hover:checked + .checkbox-features::after {
+.filter-features input[type="checkbox"]:hover:checked + label::before,
+.filter-features input[type="checkbox"]:hover:checked + label::after {
     background-color: #4d4d4d;
 }
 
-.slider-checkbox input[type="checkbox"]:disabled + .checkbox-features,
-.advantages-checkbox input[type="checkbox"]:disabled + .checkbox-features,
-.news-checkbox input[type="checkbox"]:disabled + .checkbox-features,
-.gallery-checkbox input[type="checkbox"]:disabled + .checkbox-features,
-.basket-checkbox input[type="checkbox"]:disabled + .checkbox-features {
+.slider-checkbox:disabled::before,
+.advantages-checkbox:disabled::before,
+.news-checkbox:disabled::before,
+.gallery-checkbox:disabled::before,
+.basket-checkbox:disabled::before {
     border: 3px solid #4d4d4d;  
 }
 
-.filter-features input[type="checkbox"]:disabled:checked + .checkbox-features::before,
-.filter-features input[type="checkbox"]:disabled:checked + .checkbox-features::after {
+.filter-features input[type="checkbox"]:disabled:checked + label::before,
+.filter-features input[type="checkbox"]:disabled:checked + label::after {
     background-color: #4d4d4d;
 }
-
+ 
 .btn-filter {
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 500;

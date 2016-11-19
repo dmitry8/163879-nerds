@@ -5,7 +5,7 @@
 	<title>Nerds</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/style.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<header class="main-header">
@@ -78,41 +78,48 @@
 							</li>
 						</ul>
 					</div>
+
+
+
 					<div class="filter-features">
 						<h2>Особенности:</h2>
 						<ul>
-							<li>
-								<label class="slider-checkbox">
-									<input type="checkbox" name="slider" checked>
-									<span class="checkbox-features"></span>Слайдер
+							<li class="slider-checkbox">
+								<input id="checkbox-features-1" type="checkbox" name="slider" checked>
+								<label class="opa" for="checkbox-features-1">
+									Слайдер
 								</label>
 							</li>
-							<li>
-								<label class="advantages-checkbox">
-									<input type="checkbox" name="advantages">
-									<span class="checkbox-features"></span>Блок преимуществ
+							<li class="advantages-checkbox">
+								<input id="checkbox-features-2" type="checkbox" name="advantages">
+								<label for="checkbox-features-2">
+									Блок преимуществ
 								</label>
 							</li>
-							<li>
-								<label class="news-checkbox">
-									<input type="checkbox" name="news" checked>
-									<span class="checkbox-features"></span>Новости
+							<li class="news-checkbox">
+								<input id="checkbox-features-3" type="checkbox" name="news" checked>
+								<label for="checkbox-features-3">
+									Новости
 								</label>
 							</li>
-							<li>
-								<label class="gallery-checkbox">
-									<input type="checkbox" name="gallery">
-									<span class="checkbox-features"></span>Галерея
+							<li class="gallery-checkbox">
+								<input id="checkbox-features-4" type="checkbox" name="gallery">
+								<label for="checkbox-features-4">
+									Галерея
 								</label>
 							</li>
-							<li>
-								<label class="basket-checkbox">
-									<input type="checkbox" name="basket">
-									<span class="checkbox-features"></span>Корзина
+							<li class="basket-checkbox">
+								<input id="checkbox-features-5" type="checkbox" name="basket">
+								<label for="checkbox-features-5">
+									Корзина
 								</label>
 							</li>
 						</ul>
 					</div>
+
+
+
+
 					<div class="btn-form">
 						<input class="btn btn-filter" type="submit" value="Показать">
 					</div>
