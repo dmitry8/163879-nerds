@@ -1,5 +1,4 @@
 body {
-    min-width: 1200px;
     font-size: 16px;
     line-height: 24px;
     font-family: "Roboto", "Arial", sans-serif;
@@ -20,12 +19,6 @@ h2 {
     font-size: 24px;
     line-height: 30px; 
     font-weight: 700;
-}
-
-hr {
-    border: none;
-    background-color: #eeeeee;
-    height: 2px;
 }
 
 .clearfix::after {
@@ -52,7 +45,7 @@ hr {
     min-height: 355px;
 }
 
-.logo img{
+.logo img {
     float: left;
     margin-top: 49px;
 }
@@ -294,7 +287,18 @@ hr {
 }
 
 .advantages {
-    margin-bottom: 92px;
+    margin-bottom: 102px;
+    position: relative;
+}
+
+.advantages::before {
+    content: "";
+    position: absolute;
+    top: 507px;
+    left: 0;
+    width: 1160px;
+    height: 2px;
+    background-color: #eeeeee;
 }
 
 .advantages h2 {
@@ -334,11 +338,11 @@ hr {
 }
 
 .btn-presentation {
-   background-color: #efc84a;   
+    background-color: #efc84a;   
 }
 
 .btn-presentation:hover {
-   background-color: #eab534;   
+    background-color: #eab534;   
 }
 
 .btn-presentation:active {
@@ -399,7 +403,18 @@ hr {
 }
 
 .about-us {
-    margin-bottom: 47px;
+    margin-bottom: 57px;
+    position: relative;
+}
+
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 518px;
+    left: 0;
+    width: 1160px;
+    height: 2px;
+    background-color: #eeeeee;
 }
 
 .column-right {
@@ -409,57 +424,42 @@ hr {
 }
 
 .column-right img {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
-table td{
-    width: 100px;
-}
-
-
-.title-table {
-    padding-bottom: 45px;
+.column-right h2 {
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: right;
-    padding-right: 2px;
+    text-align: center;
+    margin-bottom: 59px;
 }
 
-table .percent td {
-    padding-top: 3px;
+
+.percent {
     font-size: 45px;
     line-height: 10px;
     font-weight: 700;
+    text-align: left;
+    margin-bottom: 36px;
 }
 
-.percent td:last-child {
-    padding-left: 17px;
-}
-
-.percent td:nth-child(2) {
-    padding-left: 13px;
+.percent span {
+    margin-right: 11px;
 }
 
 .percent-sign {
-    font-size: 24px;
-    vertical-align: super;
+    font-size: 26px;
+    vertical-align: middle;
 }
 
-td {
-    padding-bottom: 20px;
-}
-
-table .text td {
+.desc-percent span {
+    display: inline-block;
+    vertical-align: top;
     line-height: 18px;
-    padding-top: 14px;
-}
-
-table .text td:nth-child(2) {
-    padding-left: 13px;
-}
-
-table .text td:last-child {
-    padding-left: 17px;
+    width: 115px;
+    text-align: left;
 }
 
 .logo-partner {
@@ -468,7 +468,6 @@ table .text td:last-child {
     vertical-align: top;
     margin-left: 26px;
     margin-right: 60px;
-    margin-top: 38px;
     margin-bottom: 20px;
 }
 
@@ -484,51 +483,33 @@ table .text td:last-child {
     opacity: 0.1;
 }
 
-.logo-partner:last-child {
+.partners {
+    position: relative;
+    margin-bottom: 94px;
+}
+
+.partners .logo-partner {
+    margin-top: 33px;
+}
+
+.logo-partner::after {
+    content: "";
+    position: absolute;
+    left: 253px;
+    top: 23px;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+}
+
+.logo-partner:nth-child(4n) {
     margin-right: 0;
 }
 
-.partners .logo-mishka {
-    margin-top: 36px;
+.logo-partner:nth-child(4n)::after {
+    content: none;
 }
 
-.partners .logo-pink {
-    margin-top: 33px;
-}
-
-.partners .logo-borodinski {
-    margin-top: 33px;
-}
-
-.logo-academy::after {
-    content: "";
-    position: absolute;
-    left: 253px;
-    top: 20px;
-    width: 2px;
-    height: 52px;
-    background-color: #eeeeee;
-}
-
-.logo-borodinski::after {
-    content: "";
-    position: absolute;
-    left: 253px;
-    top: 23px;
-    width: 2px;
-    height: 52px;
-    background-color: #eeeeee;
-}
-
-.logo-pink:after {
-    content: "";
-    position: absolute;
-    left: 253px;
-    top: 23px;
-    width: 2px;
-    height: 52px;
-    background-color: #eeeeee;
-}
 
 .margin-footer {
     margin-bottom: 79px;
@@ -537,6 +518,17 @@ table .text td:last-child {
 .main-footer {
     position: relative;
     margin-top: 79px;
+}
+
+.main-footer::before {
+    content: "";
+    position: absolute;
+    top: -82px;
+    left: 50%;
+    width: 1160px;
+    height: 2px;
+    margin-left: -580px;
+    background-color: #eeeeee;
 }
 
 .map {
@@ -553,7 +545,7 @@ table .text td:last-child {
 }
 
 .footer-contacts {
-    width: 221px;
+    min-width: 221px;
     position: absolute;
     padding-top: 34px;
     padding-left: 50px;
@@ -620,14 +612,17 @@ table .text td:last-child {
 }
 
 .social-btn-vk:active {
+    box-shadow: 0 3px 0 0 #c13135 inset;
     background-position: -4px -674px;
 }
 
 .social-btn-fb:active {
+    box-shadow: 0 3px 0 0 #c13135 inset;
     background-position: 4px -360px;
 }
 
 .social-btn-inst:active {
+    box-shadow: 0 3px 0 0 #c13135 inset;
     background-position: -1px -522px;
 }
 
@@ -668,6 +663,7 @@ table .text td:last-child {
     margin-left: auto;
     margin-top: 76px;
     padding-left: 33px;
+    font-weight: 500; 
 }
 
 .column-filters {
@@ -1126,7 +1122,7 @@ table .text td:last-child {
     margin-bottom: 15px;
 }
 
-.product-popup h2 a {
+.title-product a {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 18px;
@@ -1241,23 +1237,24 @@ table .text td:last-child {
 }
 
 .modal-content {
+    min-width: 761px;
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -295px;
-    margin-left: -435px;
     padding-right: 100px;
     padding-left: 100px;
     padding-bottom: 84px;
     background-color: #ffffff;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%);
+    z-index: 1001;
 }
 
 .modal-content-show {
     display: block;
-    -webkit-animation: rotate 0.4s;
-            animation: rotate 0.4s;
+    -webkit-animation: rotate 0.5s;
+            animation: rotate 0.5s;
 }
 
 .modal-content-close {
@@ -1294,12 +1291,12 @@ table .text td:last-child {
             transform: rotate(-45deg);
 }
 
-.modal-content-close:hover:before,
+.modal-content-close:hover::before,
 .modal-content-close:hover::after {
     background-color: #fb565a;
 }
 
-.modal-content-close:active:before,
+.modal-content-close:active::before,
 .modal-content-close:active::after {
     background-color: #ffeeee;
 }
@@ -1405,77 +1402,23 @@ table .text td:last-child {
     display: block;
 }
 
-@-webkit-keyframes shake {
-  0%, 100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  20%, 40%, 60%, 80% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
 @keyframes shake {
   0%, 100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    box-shadow: 0 0 50px 10px rgba(255, 86, 86, 0.4);
+    
   }
   10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    box-shadow: 0 0 50px 10px rgba(255, 86, 86, 0.4);
+    box-shadow: 0 0 50px 10px #ffffff;
   }
   20%, 40%, 60%, 80% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
-@-webkit-keyframes rotate {
-  0%   {
-    opacity: 0;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  
-  50% {
-    opacity: 0.2;
-  }
-
-  80% {
-     opacity: 0.4;
-  }
-
-  90% {
-    opacity: 0.6;
-  }
-
-  100% {
-   opacity: 1;
+    box-shadow: 0 0 50px 10px rgba(255, 86, 86, 0.4);
   }
 }
 
 @keyframes rotate {
-  0%   {
+  0% {
     opacity: 0;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  
-  50% {
-    opacity: 0.2;
-  }
-
-  80% {
-     opacity: 0.4;
-  }
-
-  90% {
-    opacity: 0.6;
   }
 
   100% {
@@ -1484,8 +1427,8 @@ table .text td:last-child {
 }
 
 .modal-error {
-  -webkit-animation: shake 0.5s;
-          animation: shake 0.5s;
+    -webkit-animation: shake 0.5s;
+            animation: shake 0.5s;
 }
 
 iframe {
